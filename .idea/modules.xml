@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStructuresAlgorithms.iml" filepath="$PROJECT_DIR$/DataStructuresAlgorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/HighArray/HighArray.iml" filepath="$PROJECT_DIR$/Arrays/HighArray/HighArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/LowArray/LowArray.iml" filepath="$PROJECT_DIR$/Arrays/LowArray/LowArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/OrderedWorkshop/OrderedWorkshop.iml" filepath="$PROJECT_DIR$/Arrays/OrderedWorkshop/OrderedWorkshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Person/Person.iml" filepath="$PROJECT_DIR$/Arrays/Person/Person.iml" />
+    </modules>
+  </component>
+</project>

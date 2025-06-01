@@ -1,0 +1,45 @@
+public class HighArray {
+    private long[] a;
+    private int nElems;
+    public HighArray(int size) {
+        a = new long[size];
+        nElems = 0;
+    }
+    public boolean find(long searchKey){
+        for (int i = 0; i < nElems; i++) {
+            if (searchKey == a[i])
+                return true;
+        }
+    return false;
+    }
+
+    public void insert(long value) {
+        a[nElems] = value;
+        nElems++;
+    }
+
+    public boolean delete(long value) {
+        int j;
+        for(j = 0; j < nElems; j++ )
+            if (value == a[j])
+                break;
+
+        if (j == nElems) //not found
+            return false;
+        //higher ones down
+
+        for(int k = j; k < nElems - 1; k++)
+            a[k] = a[k + 1];
+        nElems--;
+        return true;
+    }
+
+    public void display() {
+        for (int i = 0; i < nElems; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+
+
+}
