@@ -40,6 +40,10 @@ public class HighArray {
         }
         System.out.println();
     }
+    public long getMax() {
+
+        return -1;
+    }
 
 
 }
