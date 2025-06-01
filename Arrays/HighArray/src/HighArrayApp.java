@@ -29,6 +29,18 @@ public class HighArrayApp {
 
         arr.display();
 
-        System.out.println(arr.getMax());
+        System.out.println(" max Value: " + arr.getMax());
+        arr.delete(77);
+        arr.delete(44);
+        arr.delete(22);
+        arr.delete(88);
+        arr.delete(11);
+        arr.delete(66);
+        arr.delete(33);
+        System.out.println("clear array");
+        arr.display();
+        System.out.println(" max Value:  " + arr.getMax());
+
+
     }
 }

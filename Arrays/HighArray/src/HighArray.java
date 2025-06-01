@@ -42,7 +42,12 @@ public class HighArray {
     }
     public long getMax() {
 
-        return -1;
+        long maxVal = -1;
+        for (int i = 0; i < nElems; i++) {
+            if (a[i] > maxVal)
+                maxVal = a[i];
+        }
+        return maxVal;
     }
 
 
