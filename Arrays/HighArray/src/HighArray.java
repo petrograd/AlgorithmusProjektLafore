@@ -50,5 +50,15 @@ public class HighArray {
         return maxVal;
     }
 
+    public long removeMax() {
+        long maxValue = getMax();
+        delete(maxValue);
+        return maxValue;
+
+    }
+    public int size() {
+        return nElems;
+    }
+
 
 }

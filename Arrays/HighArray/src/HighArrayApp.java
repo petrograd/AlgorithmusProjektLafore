@@ -30,17 +30,26 @@ public class HighArrayApp {
         arr.display();
 
         System.out.println(" max Value: " + arr.getMax());
+
+        System.out.println("deleting 77");
         arr.delete(77);
-        arr.delete(44);
-        arr.delete(22);
-        arr.delete(88);
-        arr.delete(11);
-        arr.delete(66);
-        arr.delete(33);
-        System.out.println("clear array");
+
+
         arr.display();
         System.out.println(" max Value:  " + arr.getMax());
 
+       HighArray receiverArray = new HighArray(maxSize);
+
+       while (arr.size() > 0) {
+           long val = arr.removeMax();
+           receiverArray.insert(val);
+       }
+
+        System.out.println("donor array: ");
+        arr.display();
+
+        System.out.println("receiver array: ");
+        receiverArray.display();
 
     }
 }
