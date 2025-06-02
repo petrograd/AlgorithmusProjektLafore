@@ -80,8 +80,42 @@ public class OrdArray {
     }
     public void display() {
         for (int i = 0; i < nElems; i++) {
-            System.out.print(arr[i] + ", ");
+            if (i > 0)
+                System.out.print(", ");
+
+            System.out.print(arr[i]);
         }
         System.out.println();
+    }
+    public long getEl(int ind){
+        return arr[ind];
+    }
+    //task 2.5 PP
+    public static OrdArray merge(OrdArray arr1, OrdArray arr2) {
+        int s1 = arr1.size();
+        int s2 = arr2.size();
+        int p1 = 0, p2 = 0;
+        OrdArray targetArray;
+        targetArray = new OrdArray(arr1.nElems + arr2.nElems);
+        int pt = 0;
+        while (p1 < arr1.nElems && p2 < arr2.nElems) {
+            if (arr1.getEl(p1) <= arr2.getEl(p2)) {
+                targetArray.insert(arr1.getEl(p1));
+                p1++;
+            } else {
+                targetArray.insert(arr2.getEl(p2));
+                p2++;
+            }
+
+        }
+        while (p1 < arr1.nElems) {
+            targetArray.insert(arr1.getEl(p1));
+            p1++;
+        }
+        while (p2 < arr1.nElems) {
+            targetArray.insert(arr2.getEl(p2));
+            p2++;
+        }
+        return targetArray;
     }
 }
