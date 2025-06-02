@@ -10,7 +10,7 @@ public class OrdArray {
         return nElems;
     }
 
-    public void insert(long val){
+    public void insertOld(long val){
         int j;
         for (j = 0; j < nElems; j++) {
             if (arr[j] > val)
@@ -25,6 +25,29 @@ public class OrdArray {
         nElems++;
 
     }
+
+    public void insert(long val) { // insert with binary search
+        int left = 0;
+        int right = nElems-1;
+        int mid;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (arr[mid] <= val)
+                left= mid + 1;
+            else {
+                right = mid - 1;
+            }
+
+        }
+        //shift to the right
+        for (int i = nElems; i > left; i-- ) { //expand array
+                arr[i] = arr[i - 1];
+        }
+        //insertion
+        arr[left] = val;
+        nElems++;
+    }
+
     public boolean delete(long val){
         int j = find(val);
         if (j == nElems) //can't find it
@@ -36,6 +59,7 @@ public class OrdArray {
         nElems--;  //decrement size
         return true;
     }
+
 
     public int find(long searchKey) {
         int lowerBound = 0;
