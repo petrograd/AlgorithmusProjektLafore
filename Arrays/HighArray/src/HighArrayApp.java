@@ -58,6 +58,5 @@ public class HighArrayApp {
 
         receiverArray.display();
 
-
     }
 }
