@@ -10,7 +10,7 @@ public class HighArray {
             if (searchKey == a[i])
                 return true;
         }
-    return false;
+        return false;
     }
 
     public void insert(long value) {
@@ -60,5 +60,22 @@ public class HighArray {
         return nElems;
     }
 
+    public void noDups() {
 
+        //This version shrinks the array as it goes along
+        long value;
+        for (int i = 0; i < nElems; i++) {
+            value = a[i];
+            for (int j = i + 1; j < nElems; j++) {
+                if (a[j] == value) {
+                    for (int k = j; k < nElems - 1; k++) {
+                        a[k] = a[k+1];
+                    }
+                    nElems--;
+                    j--;
+                    System.out.println("Deleted " + value);
+                }
+            }
+        }
+    }
 }

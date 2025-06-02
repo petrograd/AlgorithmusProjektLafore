@@ -4,6 +4,9 @@ public class HighArrayApp {
         HighArray arr;
         arr = new HighArray(maxSize);
 
+        for (int i = 0; i < 10; i++) {
+            arr.insert(33);
+        }
         arr.insert(77);
         arr.insert(99);
         arr.insert(44);
@@ -49,6 +52,10 @@ public class HighArrayApp {
         arr.display();
 
         System.out.println("receiver array: ");
+        receiverArray.display();
+
+        receiverArray.noDups();
+
         receiverArray.display();
 
     }
